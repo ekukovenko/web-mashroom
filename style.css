@@ -1,3 +1,129 @@
-section.about {
-    margin: auto;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
+
+header {
+    background-color: #FFC0CBFF;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.about {
+    background-color: peachpuff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.gallery article {
+    background-color: pink;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+    border: 2px solid green;
+    max-width: 100%;
+    height: auto;
+}
+
+.first-mashroom,
+.second-mashroom,
+.third-mashroom {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+section#my_achievements ol {
+    padding-left: 20px;
+}
+
+section#ascii_art pre,
+section#code_snippet pre {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
