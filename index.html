@@ -27,6 +27,7 @@
 
     <section id="gallery" class="gallery">
         <h2>Галерея фотографий</h2>
+        <div class="gallery-grid">
         <article>
             <h3>Гриб 1</h3>
             <img class="first-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/e9b088eeb2e23eb9217733acb972889a.jpg" alt="Гриб 1"/>
@@ -44,14 +45,14 @@
             <img class="third-mashroom"  src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/b413aa1222ca6559e398f6923da38001.jpg" alt="Гриб 3">
             <p><del>Гриб мутант</del> <ins>Гриб переросток</ins></p>
         </article>
-
+        </div>
         <aside>
             <h4>Дополнительная информация:</h4>
             <p>Эти грибы были сфотографированы в разных уголках мира. Некоторые из них <b>редкие</b> и встречаются только в <ins>определённых</ins> условиях.</p>
         </aside>
     </section>
 
-    <section id="my_achievements" class="my_achievements">
+    <section id="achievements" class="my_achievements">
         <h2>Мои достижения и неудачи</h2>
         <ol>
             <li>Создал сайт со смешными грибами.</li>
@@ -87,6 +88,38 @@ console.log('Добро пожаловать на сайт смешных гри
             "Главное — <strong>не сдаваться</strong>, ведь даже маленький гриб может стать большим!" — Неизвестный автор
         </blockquote>
         <p>Моя формула успеха: <em>Успех</em> = <strong>Знания</strong><sup>2</sup> + <strong>Терпение</strong><sub>∞</sub></p>
+    </section>
+
+    <section id="table" class="table">
+        <h2>Таблица</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                <tr>
+                    <th>Название гриба</th>
+                    <th>Тип</th>
+                    <th>Комментарий</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd-row">
+                    <td>Гриб 1</td>
+                    <td>Мухомор</td>
+                    <td>Невкусный</td>
+                </tr>
+                <tr class="even-row">
+                    <td>Гриб 2</td>
+                    <td>Сыроежка</td>
+                    <td>Нормальный</td>
+                </tr>
+                <tr class="odd-row">
+                    <td>Гриб 3</td>
+                    <td>Поддубовик</td>
+                    <td>Милый достаточно</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <section id="contact" class="contact">
