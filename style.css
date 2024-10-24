@@ -150,4 +150,12 @@ footer {
 .even-row{
     background-color: peachpuff;
 }
+@media screen and (max-width: 800px) {
+    nav ul li {
+        display: block;
+    }
+    .achievements{
+        display: none;
+    }
+}
 
