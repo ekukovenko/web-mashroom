@@ -52,6 +52,29 @@
         </aside>
     </section>
 
+    <section id="gallery-flex" class="gallery-flex">
+        <h2>Галерея фотографий (Flexbox)</h2>
+        <div class="gallery-flex-container">
+            <article>
+                <h3>Гриб 1</h3>
+                <img class="first-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/e9b088eeb2e23eb9217733acb972889a.jpg" alt="Гриб 1"/>
+                <p><strong>Забавный гриб:</strong> этот гриб напоминает лицо с улыбкой!</p>
+            </article>
+
+            <article>
+                <h3>Гриб 2</h3>
+                <img class="second-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/ac29caa9016ea3d8cc1613c1bd112567.jpg" alt="Гриб 2">
+                <p><i>Необычный вид:</i> форма гриба заставляет задуматься!</p>
+            </article>
+
+            <article>
+                <h3>Гриб 3</h3>
+                <img class="third-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/b413aa1222ca6559e398f6923da38001.jpg" alt="Гриб 3">
+                <p><del>Гриб мутант</del> <ins>Гриб переросток</ins></p>
+            </article>
+        </div>
+    </section>
+
     <section id="achievements" class="achievements">
         <h2>Мои достижения и неудачи</h2>
         <ol>
@@ -92,8 +115,8 @@ console.log('Добро пожаловать на сайт смешных гри
 
     <section id="table" class="table">
         <h2>Таблица</h2>
-        <div class="table-responsive">
-            <table>
+        <div>
+            <table class="table-responsive">
                 <thead>
                 <tr>
                     <th>Название гриба</th>
@@ -102,17 +125,17 @@ console.log('Добро пожаловать на сайт смешных гри
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="odd-row">
+                <tr>
                     <td>Гриб 1</td>
                     <td>Мухомор</td>
                     <td>Невкусный</td>
                 </tr>
-                <tr class="even-row">
+                <tr>
                     <td>Гриб 2</td>
                     <td>Сыроежка</td>
                     <td>Нормальный</td>
                 </tr>
-                <tr class="odd-row">
+                <tr>
                     <td>Гриб 3</td>
                     <td>Поддубовик</td>
                     <td>Милый достаточно</td>
@@ -125,14 +148,14 @@ console.log('Добро пожаловать на сайт смешных гри
     <section id="contact" class="contact">
         <h2>Контакты</h2>
         <ul>
-            <p>Создатель сайта - Литвинов Иван Артемович</p>
-            <p>tg для связи - @realgrind</p>
+            <li>Создатель сайта - Литвинов Иван Артемович</li>
+            <li>tg для связи - @realgrind</li>
         </ul>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Смешные грибы. Все права защищены.</p>
+    &copy; 2024 Смешные грибы. Все права защищены.
 </footer>
 </body>
 </html>
