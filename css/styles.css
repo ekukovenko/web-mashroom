@@ -193,3 +193,8 @@ footer {
     height: auto;
 }
 
+nav ul li a.active {
+    font-weight: bold;
+    color: #FFD700; /* Замените цвет на желаемый */
+}
+
