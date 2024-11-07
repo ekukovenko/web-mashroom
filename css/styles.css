@@ -194,7 +194,12 @@ footer {
 }
 
 nav ul li a.active {
-    font-weight: bold;
-    color: #FFD700; /* Замените цвет на желаемый */
+    background-color: white;
+    color: #000;
 }
+
+nav ul li a:hover {
+    background-color: #ffdfdf;
+}
+
 

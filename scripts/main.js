@@ -1,19 +1,27 @@
 (function() {
-    window.addEventListener("load", () => {
-        const loadTime = performance.now();
-        const footer = document.querySelector("footer");
-        const loadInfo = document.createElement("p");
-        loadInfo.textContent = `Время загрузки страницы: ${loadTime.toFixed(2)} мс`;
-        footer.appendChild(loadInfo);
+    const currentPage = document.location.pathname.split("/").pop();
+
+    const menuItems = document.querySelectorAll('nav ul li a');
+
+    menuItems.forEach(item => {
+        if (item.getAttribute('href') === currentPage) {
+            item.classList.add('active');
+        }
+
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = '#ffdfdf';
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.style.backgroundColor = '';
+        });
     });
 
-    const currentPage = document.location.pathname.split("/").pop();
-    const menuLinks = document.querySelectorAll("nav ul li a");
-
-    menuLinks.forEach(link => {
-        const linkPage = link.getAttribute("href");
-        if (linkPage === currentPage) {
-            link.classList.add("active");
-        }
+    window.addEventListener('load', () => {
+        const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        const footer = document.querySelector('footer');
+        const loadTimeMessage = document.createElement('p');
+        loadTimeMessage.textContent = `Время загрузки страницы: ${loadTime} мс`;
+        footer.appendChild(loadTimeMessage);
     });
 })();
