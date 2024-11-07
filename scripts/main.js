@@ -1,10 +1,10 @@
 (function() {
-    const currentPage = document.location.pathname.split("/").pop();
+    const currentPage = document.location.href;
 
     const menuItems = document.querySelectorAll('nav ul li a');
 
     menuItems.forEach(item => {
-        if (item.getAttribute('href') === currentPage) {
+        if (item.href === currentPage) {
             item.classList.add('active');
         }
     });
