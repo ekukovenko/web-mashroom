@@ -7,14 +7,6 @@
         if (item.getAttribute('href') === currentPage) {
             item.classList.add('active');
         }
-
-        item.addEventListener('mouseover', () => {
-            item.style.backgroundColor = '#ffdfdf';
-        });
-
-        item.addEventListener('mouseout', () => {
-            item.style.backgroundColor = '';
-        });
     });
 
     window.addEventListener('load', () => {
