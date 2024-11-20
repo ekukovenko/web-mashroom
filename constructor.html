@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Конструктор грибов</title>
+  <script src="scripts/constructor.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>Конструктор грибов</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная страница</a></li>
+      <li><a href="about.html">О сайте</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="constructor.html">Конструктор</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="form-section">
+    <h2>Добавить новый гриб</h2>
+    <form id="mushroom-form">
+      <label for="name">Название гриба:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="type">Тип гриба:</label>
+      <input type="text" id="type" name="type" required>
+
+      <label for="comment">Комментарий:</label>
+      <textarea id="comment" name="comment" required></textarea>
+
+      <label for="image">Ссылка на изображение:</label>
+      <input type="url" id="image" name="image" required>
+
+      <button type="submit">Добавить гриб</button>
+    </form>
+  </section>
+  <aside id="examples-section">
+    <h3>Примеры ссылок для изображений</h3>
+    <ul>
+      <li><a href="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/9C8239D3-50BE-4265-93E3-E3840FF6595F_1_102_o.jpeg" target="_blank">https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/9C8239D3-50BE-4265-93E3-E3840FF6595F_1_102_o.jpeg</a></li>
+      <li><a href="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/227045B0-97EE-4009-96E3-841378781101.jpeg" target="_blank">https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/227045B0-97EE-4009-96E3-841378781101.jpeg</a></li>
+      <li><a href="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/img.png" target="_blank">https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/img.png</a></li>
+    </ul>
+    <p>Скопируйте ссылку и вставьте её в поле "Ссылка на изображение".</p>
+  </aside>
+</main>
+
+<footer>
+  &copy; 2024 Смешные грибы. Все права защищены.
+</footer>
+</body>
+</html>

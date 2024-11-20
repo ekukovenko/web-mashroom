@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link href="css/styles.css" rel="stylesheet">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/gallery.js" defer></script>
     <title>Галерея</title>
 </head>
 <body>
@@ -14,35 +15,14 @@
         <li><a href="index.html">Главная страница</a></li>
         <li><a href="about.html">О сайте</a></li>
         <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="constructor.html">Конструктор</a></li>
         <li><a href="contact.html">Контакты</a></li>
     </ul>
   </nav>
 </header>
 <main>
   <h2>Галерея фотографий</h2>
-  <div class="gallery-grid">
-    <article>
-      <h3>Гриб 1</h3>
-      <img class="first-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/e9b088eeb2e23eb9217733acb972889a.jpg" alt="Гриб 1"/>
-      <p><strong>Забавный гриб:</strong> этот гриб напоминает лицо с улыбкой!</p>
-    </article>
-
-    <article>
-      <h3>Гриб 2</h3>
-      <img class="second-mashroom" src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/ac29caa9016ea3d8cc1613c1bd112567.jpg" alt="Гриб 2">
-      <p><i>Необычный вид:</i> форма гриба заставляет задуматься!</p>
-    </article>
-
-    <article>
-      <h3>Гриб 3</h3>
-      <img class="third-mashroom"  src="https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/b413aa1222ca6559e398f6923da38001.jpg" alt="Гриб 3">
-      <p><del>Гриб мутант</del> <ins>Гриб переросток</ins></p>
-    </article>
-  </div>
-  <aside>
-    <h4>Дополнительная информация:</h4>
-    <p>Эти грибы были сфотографированы в разных уголках мира. Некоторые из них <b>редкие</b> и встречаются только в <ins>определённых</ins> условиях.</p>
-  </aside>
+  <div id="gallery-container"></div>
 </main>
 <footer>
   &copy; 2024 Смешные грибы. Все права защищены.
