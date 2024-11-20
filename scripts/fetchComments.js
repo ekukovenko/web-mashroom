@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchComments = async () => {
         try {
-            preloader.classList.remove('hidden');
+            preloader.style.display = 'flex';
 
             const randomFilter = Math.random() > 0.5 ? '?id_gte=100' : '?id_lte=50';
             const response = await fetch(`https://jsonplaceholder.typicode.com/comments${randomFilter}`);
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
 
-            preloader.classList.add('hidden');
+            preloader.style.display = 'none';
 
             renderComments(data);
         } catch (error) {
-            preloader.classList.add('hidden');
+            preloader.style.display = 'none';
             commentsContainer.innerHTML = `<p style="color: red;">⚠ Что-то пошло не так: ${error.message}</p>`;
         }
     };
