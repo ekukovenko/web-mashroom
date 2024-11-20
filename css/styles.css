@@ -202,4 +202,13 @@ nav ul li a:hover {
     background-color: #ffdfdf;
 }
 
+.header-logo img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.header-logo img{
+    max-height: 60px;
+    width: auto
+}
 
