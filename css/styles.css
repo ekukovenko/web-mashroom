@@ -191,10 +191,14 @@ footer {
 
 nav ul li a.active {
     background-color: #ff478c;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
     background-color: #ff85c9;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 .header-logo {
@@ -210,7 +214,61 @@ nav ul li a:hover {
     max-width: 100%;
     width: auto
 }
+.header-logo img:hover {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 @media screen and (max-width: 700px) {
     .header-logo img {max-height: 25px}
 }
-
+#preloader img {
+    max-width: 100px;
+    height: auto;
+}
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+#comments-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffe4e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#comments-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff69b4;
+    padding-bottom: 5px;
+}
+#comments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+.comment-card {
+    background-color: #fff5fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.comment-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ff478c;
+}
+.comment-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}

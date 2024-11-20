@@ -5,6 +5,7 @@
     <link href="../css/styles.css" rel="stylesheet">
     <script src="../scripts/main.js" defer></script>
     <script src="../scripts/gallery.js" defer></script>
+    <script src="../scripts/fetchComments.js" defer></script>
     <title>Галерея</title>
 </head>
 <body>
@@ -28,6 +29,14 @@
 <main>
   <h2>Галерея фотографий</h2>
   <div id="gallery-container" class="gallery-new"></div>
+    <section id="comments-section">
+        <h2>Комментарии</h2>
+        <button id="refresh-button">Обновить комментарии</button>
+        <div id="preloader" class="hidden">
+            <img src="https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif" alt="Загрузка...">
+        </div>
+        <div id="comments-container"></div>
+    </section>
 </main>
 <footer>
   &copy; 2024 Смешные грибы. Все права защищены.
