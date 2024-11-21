@@ -28,7 +28,18 @@
 </header>
 <main>
   <h2>Галерея фотографий</h2>
+    <template id="mushroom-template">
+        <div class="mushroom-card">
+            <h3 class="mushroom-name"></h3>
+            <img class="mushroom-image" src="" alt="">
+            <p><strong>Тип:</strong> <span class="mushroom-type"></span></p>
+            <p><strong>Комментарий:</strong> <span class="mushroom-comment"></span></p>
+            <button class="delete-button">Удалить</button>
+        </div>
+    </template>
+
   <div id="gallery-container" class="gallery-new"></div>
+
     <section id="comments-section">
         <h2>Комментарии</h2>
         <button id="refresh-button">Обновить комментарии</button>

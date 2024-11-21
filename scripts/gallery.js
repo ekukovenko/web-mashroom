@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.getElementById('gallery-container');
+    const mushroomTemplate = document.getElementById('mushroom-template');
 
     const loadMushrooms = () => JSON.parse(localStorage.getItem('mushrooms')) || [];
 
@@ -14,16 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryContainer.innerHTML = '<p>Нет добавленных грибов.</p>';
         } else {
             mushrooms.forEach((mushroom, index) => {
-                const mushroomCard = document.createElement('div');
-                mushroomCard.classList.add('mushroom-card');
-                mushroomCard.innerHTML = `
-                <h3>${mushroom.name}</h3>
-                <img src="${mushroom.image}" alt="${mushroom.name}">
-                <p><strong>Тип:</strong> ${mushroom.type}</p>
-                <p><strong>Комментарий:</strong> ${mushroom.comment}</p>
-                <button class="delete-button" data-index=${index}>Удалить</button>
-            `;
-                galleryContainer.appendChild(mushroomCard);
+                const mushroomClone = mushroomTemplate.content.cloneNode(true);
+                mushroomClone.querySelector('.mushroom-name').textContent = mushroom.name;
+                mushroomClone.querySelector('.mushroom-type').textContent = mushroom.type;
+                mushroomClone.querySelector('.mushroom-comment').textContent = mushroom.comment;
+                mushroomClone.querySelector('.mushroom-image').src = mushroom.image;
+                mushroomClone.querySelector('.mushroom-image').alt = mushroom.name;
+                const deleteButton = mushroomClone.querySelector('.delete-button');
+                deleteButton.dataset.index = index;
+                galleryContainer.appendChild(mushroomClone);
             });
         }
     };
