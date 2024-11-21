@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!response.ok) throw new Error(`Response status: ${response.status}`);
 
-            const data = await response.json();
+            let data = await response.json();
+            data = data.slice(0,10);
 
             preloader.style.display = 'none';
 
@@ -24,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderComments = (comments) => {
         commentsContainer.innerHTML = comments
-            .slice(0, 10)
             .map(
                 (comment) => `
                 <div class="comment-card">
