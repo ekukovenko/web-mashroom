@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     const commentsContainer = document.getElementById('comments-container');
+    const commentTemplate = document.getElementById('comment-template');
 
     const fetchComments = async () => {
         try {
             preloader.style.display = 'flex';
 
-            const randomFilter = Math.random() > 0.5 ? '?id_gte=100' : '?id_lte=50';
-            const response = await fetch(`https://jsonplaceholder.typicode.com/comments${randomFilter}`);
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/3/comments`);
 
             if (!response.ok) throw new Error(`Response status: ${response.status}`);
 
             let data = await response.json();
-            data = data.slice(0,10);
 
             preloader.style.display = 'none';
 
@@ -24,17 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderComments = (comments) => {
-        commentsContainer.innerHTML = comments
-            .map(
-                (comment) => `
-                <div class="comment-card">
-                    <h3>${comment.name}</h3>
-                    <p><strong>Email:</strong> ${comment.email}</p>
-                    <p>${comment.body}</p>
-                </div>
-            `
-            )
-            .join('');
+        commentsContainer.innerHTML = '';
+
+        comments.forEach((comment) => {
+            const commentClone = commentTemplate.content.cloneNode(true);
+            commentClone.querySelector('.comment-name').textContent = comment.name;
+            commentClone.querySelector('.comment-email').textContent = comment.email;
+            commentClone.querySelector('.comment-body').textContent = comment.body;
+            commentsContainer.appendChild(commentClone);
+        })
     };
 
     document.getElementById('refresh-button').addEventListener('click', fetchComments);
