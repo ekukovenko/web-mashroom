@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const newMushroom = {
-            name: document.getElementById('name').value,
-            type: document.getElementById('type').value,
-            comment: document.getElementById('comment').value,
-            image: document.getElementById('image').value,
-        };
+        const name  = document.getElementById('name').value.trim()
+        const type = document.getElementById('type').value.trim()
+        const comment = document.getElementById('comment').value.trim()
+        const image = document.getElementById('image').value.trim()
+
+        if (!name || !type || !comment || !image) {
+            alert('Все поля должны быть заполнены!');
+            return;
+        }
+
+        const newMushroom = {name, type, comment, image};
 
         const mushrooms = JSON.parse(localStorage.getItem('mushrooms')) || [];
         mushrooms.push(newMushroom);
