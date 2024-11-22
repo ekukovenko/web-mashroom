@@ -19,12 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 mushroomClone.querySelector('.mushroom-name').textContent = mushroom.name;
                 mushroomClone.querySelector('.mushroom-type').textContent = mushroom.type;
                 mushroomClone.querySelector('.mushroom-comment').textContent = mushroom.comment;
-                mushroomClone.querySelector('.mushroom-image').src = mushroom.image;
-                mushroomClone.querySelector('.mushroom-image').alt = mushroom.name;
+
+                const sliderContainer = mushroomClone.querySelector('.swiper-wrapper');
+                mushroom.images.forEach(image => {
+                    const slide = document.createElement('div');
+                    slide.classList.add('swiper-slide');
+                    slide.innerHTML = `<img src="${image}" alt="${mushroom.name}">`;
+                    sliderContainer.appendChild(slide);
+                })
+
                 const deleteButton = mushroomClone.querySelector('.delete-button');
                 deleteButton.dataset.index = index;
                 galleryContainer.appendChild(mushroomClone);
             });
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+            })
         }
     };
     galleryContainer.addEventListener('click', (e) => {

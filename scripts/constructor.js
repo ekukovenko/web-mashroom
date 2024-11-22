@@ -7,14 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const name  = document.getElementById('name').value.trim()
         const type = document.getElementById('type').value.trim()
         const comment = document.getElementById('comment').value.trim()
-        const image = document.getElementById('image').value.trim()
+        const imagesInput = document.getElementById('images').value.trim()
 
-        if (!name || !type || !comment || !image) {
+        if (!name || !type || !comment || !imagesInput) {
             alert('Все поля должны быть заполнены!');
             return;
         }
 
-        const newMushroom = {name, type, comment, image};
+        const images = imagesInput.split(",").map(url => url.trim())
+
+        const newMushroom = {name, type, comment, images};
 
         const mushrooms = JSON.parse(localStorage.getItem('mushrooms')) || [];
         mushrooms.push(newMushroom);

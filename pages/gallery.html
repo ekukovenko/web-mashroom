@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="../scripts/main.js" defer></script>
     <script src="../scripts/gallery.js" defer></script>
     <script src="../scripts/fetchComments.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <title>Галерея</title>
 </head>
 <body>
@@ -31,7 +33,10 @@
     <template id="mushroom-template">
         <div class="mushroom-card">
             <h3 class="mushroom-name"></h3>
-            <img class="mushroom-image" src="" alt="">
+            <div class="mushroom-slider swiper-container">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
             <p><strong>Тип:</strong> <span class="mushroom-type"></span></p>
             <p><strong>Комментарий:</strong> <span class="mushroom-comment"></span></p>
             <button class="delete-button">Удалить</button>
