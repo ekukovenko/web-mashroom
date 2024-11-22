@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.location.href = 'slider.html';
                     });
                 } else {
-                    imageElement.src = 'https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/ac29caa9016ea3d8cc1613c1bd112567.jpg';
+                    imageElement.src = 'https://elitas.ru/images/no-image-large.jpg';
                     imageElement.alt = 'Изображение отсутствует';
                 }
 
