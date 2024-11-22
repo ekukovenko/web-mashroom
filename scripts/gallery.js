@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 mushroomClone.querySelector('.mushroom-type').textContent = mushroom.type;
                 mushroomClone.querySelector('.mushroom-comment').textContent = mushroom.comment;
 
-                const sliderContainer = mushroomClone.querySelector('.swiper-wrapper');
-                mushroom.images.forEach(image => {
-                    const slide = document.createElement('div');
-                    slide.classList.add('swiper-slide');
-                    slide.innerHTML = `<img src="${image}" alt="${mushroom.name}">`;
-                    sliderContainer.appendChild(slide);
-                })
+               const imageElement = mushroomClone.querySelector('.mushroom-image');
+               imageElement.src = mushroom.images[0]
+                imageElement.alt = mushroom.name;
+
+               imageElement.addEventListener('click', () => {
+                   localStorage.setItem('currentMushroom', JSON.stringify(mushroom));
+                   window.location.href = 'slider.html';
+               })
 
                 const deleteButton = mushroomClone.querySelector('.delete-button');
                 deleteButton.dataset.index = index;
