@@ -21,13 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 mushroomClone.querySelector('.mushroom-comment').textContent = mushroom.comment;
 
                const imageElement = mushroomClone.querySelector('.mushroom-image');
-               imageElement.src = mushroom.images[0]
-                imageElement.alt = mushroom.name;
+                if (Array.isArray(mushroom.images) && mushroom.images.length > 0) {
+                    imageElement.src = mushroom.images[0];
+                    imageElement.alt = mushroom.name;
 
-               imageElement.addEventListener('click', () => {
-                   localStorage.setItem('currentMushroom', JSON.stringify(mushroom));
-                   window.location.href = 'slider.html';
-               })
+                    imageElement.addEventListener('click', () => {
+                        localStorage.setItem('currentMushroom', JSON.stringify(mushroom));
+                        window.location.href = 'slider.html';
+                    });
+                } else {
+                    imageElement.src = 'https://raw.githubusercontent.com/ekukovenko/web-mashroom/main/images/ac29caa9016ea3d8cc1613c1bd112567.jpg';
+                    imageElement.alt = 'Изображение отсутствует';
+                }
 
                 const deleteButton = mushroomClone.querySelector('.delete-button');
                 deleteButton.dataset.index = index;
