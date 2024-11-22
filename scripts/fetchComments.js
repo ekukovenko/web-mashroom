@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let data = await response.json();
 
+            shuffleArray(data)
+
             preloader.style.display = 'none';
 
             renderComments(data);
@@ -33,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
             commentsContainer.appendChild(commentClone);
         })
     };
+
+    const shuffleArray = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
 
     document.getElementById('refresh-button').addEventListener('click', fetchComments);
 
