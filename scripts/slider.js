@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        loop: false,
     });
 
     const backButton = document.querySelector('.back-button');
